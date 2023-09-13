@@ -1,4 +1,6 @@
 org.platkmframework.annotation
 org.platkmframework.annotation.db
 org.platkmframework.annotation.limit
+org.platkmframework.annotation.rmi
 org.platkmframework.annotation.security
+org.platkmframework.annotation.timer
