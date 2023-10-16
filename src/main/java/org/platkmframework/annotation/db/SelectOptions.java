@@ -18,7 +18,6 @@
  *******************************************************************************/
 package org.platkmframework.annotation.db;
 
-
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
@@ -33,9 +32,8 @@ import java.lang.annotation.Target;
  **/
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.TYPE) //on class level
-public @interface SearchFilterInfo {
- 
-	String code() default "";
-	String description() default "";
+public @interface SelectOptions{
+	 
+	SelectOption[] selectOption(); 
 
 }

@@ -16,12 +16,12 @@
  * Contributors:
  * 	Eduardo Iglesias Taylor - initial API and implementation
  *******************************************************************************/
-package org.platkmframework.annotation;
+package org.platkmframework.annotation.db;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
-import java.lang.annotation.Target;
+import java.lang.annotation.Target; 
 
 
 /**
@@ -32,9 +32,9 @@ import java.lang.annotation.Target;
  **/
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.TYPE) //on class level
-public @interface CustomFilter{
-	
-	String[] pattern(); 
-	boolean security() default true;
-	
+public @interface  SearchFilterColumn{
+
+	String label() default "";
+	String code(); 
+	String column(); 
 }

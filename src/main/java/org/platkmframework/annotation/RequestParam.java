@@ -41,6 +41,4 @@ public @interface RequestParam
 	
 	String description() default "";  
 	
-	boolean path() default false;// si no agarra el valor de los parametros, si no esta se agarra del la url
-	
 }

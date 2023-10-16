@@ -38,4 +38,6 @@ public @interface RequestBody {
 	
 	String description() default ""; 
 	
+	Class<? extends UIFilterToSearchConverter>[] converter() default {};
+	
 }

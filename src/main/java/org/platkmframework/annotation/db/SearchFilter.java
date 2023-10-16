@@ -18,9 +18,7 @@
  *******************************************************************************/
 package org.platkmframework.annotation.db;
 
-import static java.lang.annotation.ElementType.FIELD;
-import static java.lang.annotation.ElementType.METHOD; 
- 
+import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target; 
@@ -32,12 +30,13 @@ import java.lang.annotation.Target;
  *   Contributors: 
  *   	Eduardo Iglesias - initial API and implementation
  **/
-@Target({METHOD, FIELD})
 @Retention(RetentionPolicy.RUNTIME)
-public @interface  SearchFilterColumnInfo{
+@Target(ElementType.TYPE) //on class level
+public @interface  SearchFilter{
 
-	String label() default "";
-	String code()  default ""; 
-	String column()  default ""; 
-	boolean fastsearch() default false;
+	String code(); 
+	SearchFilterColumn[] columns();
+	String fastsearch();
+	String orderColumn();
+	String orderType();
 }

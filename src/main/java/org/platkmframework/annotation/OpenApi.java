@@ -16,7 +16,7 @@
  * Contributors:
  * 	Eduardo Iglesias Taylor - initial API and implementation
  *******************************************************************************/
-package org.platkmframework.annotation.db;
+package org.platkmframework.annotation;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -32,11 +32,6 @@ import java.lang.annotation.Target;
  **/
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.TYPE) //on class level
-public @interface FastSearcher{
-	 
-	String code();
-	String key();
-	String text();
-	String likes();
-
+public @interface OpenApi
+{
 }

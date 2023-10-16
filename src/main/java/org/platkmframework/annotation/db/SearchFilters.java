@@ -16,7 +16,8 @@
  * Contributors:
  * 	Eduardo Iglesias Taylor - initial API and implementation
  *******************************************************************************/
-package org.platkmframework.annotation;
+package org.platkmframework.annotation.db;
+
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -32,8 +33,8 @@ import java.lang.annotation.Target;
  **/
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.TYPE) //on class level
-public @interface CustomServlet
-{ 
-	String[] mappings();  
+public @interface SearchFilters {
+  
+	SearchFilter[] searchFilters();
 
 }

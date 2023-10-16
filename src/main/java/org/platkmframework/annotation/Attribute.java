@@ -18,10 +18,15 @@
  *******************************************************************************/
 package org.platkmframework.annotation;
 
-import java.lang.annotation.ElementType;
+import static java.lang.annotation.ElementType.FIELD;
+import static java.lang.annotation.ElementType.METHOD; 
+ 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
-import java.lang.annotation.Target;
+import java.lang.annotation.Target; 
+
+@Target({METHOD, FIELD})
+@Retention(RetentionPolicy.RUNTIME)
 
 
 /**
@@ -30,11 +35,18 @@ import java.lang.annotation.Target;
  *   Contributors: 
  *   	Eduardo Iglesias - initial API and implementation
  **/
-@Target(value = ElementType.FIELD)
-@Retention(value = RetentionPolicy.RUNTIME)
-public @interface ClassField {
+public @interface Attribute{
 
-	String name(); 
-	boolean required() default false; //used for form input value and table input value required check from backend 
-	String description() default ""; 
+	String column()		 default "";
+	String label() 		 default "";
+	String code()  		 default "";
+	String description() default "";
+	String tagtype() 	 default "";
+	int precision() 	 default 0;
+	int scale() 	 	 default 0;
+	int min()			 default 0;
+	String format()      default "";
+	boolean nullable()   default false;
+	
+	Class<?>[] json() 	 default {};
 }

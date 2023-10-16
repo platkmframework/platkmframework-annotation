@@ -18,15 +18,10 @@
  *******************************************************************************/
 package org.platkmframework.annotation.db;
 
-import static java.lang.annotation.ElementType.FIELD;
-import static java.lang.annotation.ElementType.METHOD; 
- 
+import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
-import java.lang.annotation.Target; 
-
-@Target({METHOD, FIELD})
-@Retention(RetentionPolicy.RUNTIME)
+import java.lang.annotation.Target;
 
 
 /**
@@ -35,12 +30,13 @@ import java.lang.annotation.Target;
  *   Contributors: 
  *   	Eduardo Iglesias - initial API and implementation
  **/
-public @interface  ColumnInfo{
+@Retention(RetentionPolicy.RUNTIME)
+@Target(ElementType.TYPE) //on class level
+public @interface SelectOption{
+	 
+	String code();
+	String key();
+	String text();
+	String searchCode();
 
-	String label() 		 default "";
-	String code()  		 default "";
-	String description() default "";
-	String tagtype() 	 default "";
-	int minlength() 	 default 0;
-	Class<?>[] json() 	 default {};
 }

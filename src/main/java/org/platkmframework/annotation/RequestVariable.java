@@ -32,12 +32,15 @@ import java.lang.annotation.Target;
  **/
 @Target(value = ElementType.PARAMETER)
 @Retention(value = RetentionPolicy.RUNTIME)
-public @interface ClassAttribute 
+public @interface RequestVariable 
 {
 
-	String name();  
+	String name(); 
 	
-	String description() default ""; 
-	 
+	boolean required() default false;
+	
+	String description() default "";  
+	
+	boolean path() default false;// si no agarra el valor de los parametros, si no esta se agarra del la url
 	
 }

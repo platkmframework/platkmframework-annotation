@@ -34,7 +34,7 @@ import java.lang.annotation.Target;
 @Retention(value = RetentionPolicy.RUNTIME)
 public @interface ClassMethod {
 
-	String name(); 
+	String name() default "";  
 	
 	String description() default ""; 
 	
