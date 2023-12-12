@@ -16,12 +16,12 @@
  * Contributors:
  * 	Eduardo Iglesias Taylor - initial API and implementation
  *******************************************************************************/
-package org.platkmframework.annotation.db;
+package org.platkmframework.annotation;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
-import java.lang.annotation.Target; 
+import java.lang.annotation.Target;
 
 
 /**
@@ -32,11 +32,6 @@ import java.lang.annotation.Target;
  **/
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.TYPE) //on class level
-public @interface  SearchFilter{
-
-	String code(); 
-	SearchFilterColumn[] columns();
-	String fastsearch();
-	String orderColumn();
-	String orderType();
+public @interface Functional {
+ 
 }

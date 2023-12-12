@@ -18,11 +18,10 @@
  *******************************************************************************/
 package org.platkmframework.annotation.db;
 
-
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
-import java.lang.annotation.Target;
+import java.lang.annotation.Target; 
 
 
 /**
@@ -33,10 +32,14 @@ import java.lang.annotation.Target;
  **/
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.TYPE) //on class level
-public @interface SearchFilters {
-  
-	ESearchFilter[] entitySearchFilters() default {};
-	
-	QSearchFilter[] querySearchFilters() default {};
+public @interface  QSearchFilter{
 
+	String querymanagerid();
+	Class<?> resultClass();
+	String code(); 
+	SearchFilterColumn[] columns();
+	String fastsearch();
+	String orderColumn();
+	String orderType();
+	String description() default "";
 }

@@ -16,17 +16,12 @@
  * Contributors:
  * 	Eduardo Iglesias Taylor - initial API and implementation
  *******************************************************************************/
-package org.platkmframework.annotation;
+package org.platkmframework.annotation.db;
 
-import static java.lang.annotation.ElementType.FIELD;
-import static java.lang.annotation.ElementType.METHOD; 
- 
+import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target; 
-
-@Target({METHOD, FIELD})
-@Retention(RetentionPolicy.RUNTIME)
 
 
 /**
@@ -35,18 +30,16 @@ import java.lang.annotation.Target;
  *   Contributors: 
  *   	Eduardo Iglesias - initial API and implementation
  **/
-public @interface Attribute{
+@Retention(RetentionPolicy.RUNTIME)
+@Target(ElementType.TYPE) //on class level
+public @interface  ESearchFilter{
 
-	String column()		 default "";
-	String label() 		 default "";
-	String code()  		 default "";
+	Class<?> resultClass();
+	Class<?> enityClass();
+	String code(); 
+	SearchFilterColumn[] columns();
+	String fastsearch();
+	String orderColumn();
+	String orderType();
 	String description() default "";
-	String tagtype() 	 default "";
-	int precision() 	 default 0;
-	int scale() 	 	 default 0;
-	int min()			 default 0;
-	String format()      default "";
-	boolean nullable()   default false;
-	
-	Class<?>[] json() 	 default {};
 }

@@ -16,8 +16,7 @@
  * Contributors:
  * 	Eduardo Iglesias Taylor - initial API and implementation
  *******************************************************************************/
-package org.platkmframework.annotation.db;
-
+package org.platkmframework.annotation;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -31,12 +30,7 @@ import java.lang.annotation.Target;
  *   Contributors: 
  *   	Eduardo Iglesias - initial API and implementation
  **/
-@Retention(RetentionPolicy.RUNTIME)
-@Target(ElementType.TYPE) //on class level
-public @interface SearchFilters {
-  
-	ESearchFilter[] entitySearchFilters() default {};
-	
-	QSearchFilter[] querySearchFilters() default {};
-
+@Target(value = ElementType.METHOD)
+@Retention(value = RetentionPolicy.RUNTIME)
+public @interface HttpRestAsyn {
 }
