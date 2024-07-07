@@ -36,6 +36,6 @@ public @interface Api
 {
 
 	String path(); 
-	String description();
+	String description() default "";
 
 }

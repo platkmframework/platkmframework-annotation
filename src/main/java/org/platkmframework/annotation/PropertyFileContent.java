@@ -30,9 +30,12 @@ import java.lang.annotation.Target;
  *   Contributors: 
  *   	Eduardo Iglesias - initial API and implementation
  **/
+@Target(ElementType.FIELD)
 @Retention(RetentionPolicy.RUNTIME)
-@Target(ElementType.TYPE) //on class level
-public @interface Component{
-	
-	String reference() default "";
+
+public @interface  PropertyFileContent {
+
+	String path();
 }
+
+ 

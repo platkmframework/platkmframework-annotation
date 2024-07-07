@@ -16,7 +16,7 @@
  * Contributors:
  * 	Eduardo Iglesias Taylor - initial API and implementation
  *******************************************************************************/
-package org.platkmframework.annotation;
+package org.platkmframework.annotation.db;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -30,9 +30,12 @@ import java.lang.annotation.Target;
  *   Contributors: 
  *   	Eduardo Iglesias - initial API and implementation
  **/
+@Target(ElementType.FIELD)
 @Retention(RetentionPolicy.RUNTIME)
-@Target(ElementType.TYPE) //on class level
-public @interface Component{
-	
-	String reference() default "";
+
+public @interface  ConverterReference {
+
+	String reference();
 }
+
+ 
