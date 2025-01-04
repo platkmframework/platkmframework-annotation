@@ -34,9 +34,21 @@ import java.lang.annotation.Target;
 @Retention(value = RetentionPolicy.RUNTIME)
 public @interface ClassMethod {
 
+	/**
+	 *  class method name
+	 * @return name
+	 */
 	String name() default "";  
 	
+	/**
+	 * class method description
+	 * @return description
+	 */
 	String description() default ""; 
 	
+	/**
+	 * http method
+	 * @return method
+	 */
 	HttpRequestMethod method();
 }

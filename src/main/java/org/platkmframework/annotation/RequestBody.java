@@ -33,11 +33,23 @@ import java.lang.annotation.Target;
 @Target(value = ElementType.PARAMETER)
 @Retention(value = RetentionPolicy.RUNTIME)
 public @interface RequestBody {
-	
+
+	/**
+	 *  whether required
+	 * @return required
+	 */
 	boolean required() default false;
 	
+	/**
+	 * body description
+	 * @return description
+	 */
 	String description() default ""; 
 	
+	/**
+	 * filter converter
+	 * @return converter class
+	 */
 	Class<? extends UIFilterToSearchConverter>[] converter() default {};
 	
 }

@@ -35,6 +35,10 @@ import java.lang.annotation.Target;
 public @interface HeaderParam 
 {
   
+	/**
+	 * param name
+	 * @return name
+	 */
 	String names() default ""; 
 	
 }

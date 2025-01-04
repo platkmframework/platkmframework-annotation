@@ -34,7 +34,16 @@ import java.lang.annotation.Target;
 @Target( value = {ElementType.TYPE,ElementType.PARAMETER, ElementType.METHOD}) //on class level
 public @interface SecurityRole {
 
+	/**
+	 * name
+	 * @return name
+	 */
 	String[] name();  
+	
+	/**
+	 * name
+	 * @return name
+	 */
 	String description() default "";
 	 
 }

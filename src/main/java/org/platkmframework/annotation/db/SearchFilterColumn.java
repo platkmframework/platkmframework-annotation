@@ -34,7 +34,21 @@ import java.lang.annotation.Target;
 @Target(ElementType.TYPE) //on class level
 public @interface  SearchFilterColumn{
 
+	/**
+	 * label
+	 * @return label
+	 */
 	String label() default "";
+	
+	/**
+	 * code
+	 * @return code
+	 */
 	String code(); 
+	
+	/**
+	 * column
+	 * @return column
+	 */
 	String column(); 
 }

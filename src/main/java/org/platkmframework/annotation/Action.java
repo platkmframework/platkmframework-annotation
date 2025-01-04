@@ -35,7 +35,16 @@ import java.lang.annotation.Target;
 @Target(ElementType.TYPE) //on class level
 public @interface Action{
 	
+	/**
+	 *  action code
+	 * @return code name
+	 */
 	String code(); 
+	
+	/**
+	 * action description
+	 * @return description
+	 */
 	String description();
 
 }

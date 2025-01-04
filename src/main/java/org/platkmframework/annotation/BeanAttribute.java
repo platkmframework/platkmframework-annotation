@@ -34,6 +34,15 @@ import java.lang.annotation.Target;
 @Retention(value = RetentionPolicy.RUNTIME)
 public @interface BeanAttribute {
  
+	/**
+	 * whether required
+	 * @return booleran
+	 */
 	boolean required() default false; //used for check input required from api rest call
+	
+	/**
+	 * bean attribute description
+	 * @return description value
+	 */
 	String description() default ""; 
 }

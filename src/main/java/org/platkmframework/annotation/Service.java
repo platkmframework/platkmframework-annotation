@@ -34,7 +34,16 @@ import java.lang.annotation.Target;
 @Target(ElementType.TYPE) //on class level
 public @interface Service{
 	
+	/**
+	 * key
+	 * @return key
+	 */
 	String key()  	default "";
+	
+	/**
+	 * value
+	 * @return value
+	 */
 	String value()  default "";
 
 }

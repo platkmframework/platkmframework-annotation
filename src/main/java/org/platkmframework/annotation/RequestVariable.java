@@ -35,12 +35,28 @@ import java.lang.annotation.Target;
 public @interface RequestVariable 
 {
 
+	/**
+	 * variable name
+	 * @return name
+	 */
 	String name(); 
 	
+	/**
+	 * required
+	 * @return required
+	 */
 	boolean required() default false;
 	
+	/**
+	 * description
+	 * @return description
+	 */
 	String description() default "";  
 	
+	/**
+	 * path
+	 * @return path
+	 */
 	boolean path() default false;// si no agarra el valor de los parametros, si no esta se agarra del la url
 	
 }

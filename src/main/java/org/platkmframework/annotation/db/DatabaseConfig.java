@@ -34,6 +34,10 @@ import java.lang.annotation.Target;
 @Target(ElementType.TYPE) //on class level
 public @interface DatabaseConfig{
 	 
+	/**
+	 * name 
+	 * @return name
+	 */
 	String name(); 
 
 }

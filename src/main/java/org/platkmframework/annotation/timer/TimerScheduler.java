@@ -34,9 +34,33 @@ import java.lang.annotation.Target;
 @Retention(value = RetentionPolicy.RUNTIME)
 public @interface TimerScheduler {
 
+	/**
+	 * name
+	 * @return name
+	 */
 	String name() default "";
+	
+	/**
+	 * runOnStart
+	 * @return runOnStart
+	 */
 	String runOnStart() default "true";
+	
+	/**
+	 * time
+	 * @return time
+	 */
 	String time(); 
+	
+	/**
+	 * delay
+	 * @return delay
+	 */
 	String delay();
+	
+	/**
+	 * timeformat 
+	 * @return timeformat
+	 */
 	String timeformat() default ""; 
 }

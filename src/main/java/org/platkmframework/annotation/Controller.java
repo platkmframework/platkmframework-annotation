@@ -34,16 +34,43 @@ import java.lang.annotation.Target;
 @Target(ElementType.TYPE) //on class level
 public @interface Controller
 {
-	
+	/**
+	 * scope enum
+	 */
 	public enum Scope 
 	{
+		/**
+		 * Scope APPLICATION
+		 */
 	    APPLICATION,
+	    
+	    /**
+		 * Scope SESSION
+		 */
 	    SESSION,
+	    
+	    /**
+		 * Scope REQUEST
+		 */
 	    REQUEST;
 	}	
 	
+	/**
+	 * path
+	 * @return path
+	 */
 	String path(); 
+	
+	/**
+	 * description
+	 * @return description
+	 */
 	String description() default "";
+	
+	/**
+	 * scope
+	 * @return scope
+	 */
 	Scope scope() default Scope.SESSION;
 
 }

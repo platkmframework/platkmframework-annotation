@@ -34,6 +34,15 @@ import java.lang.annotation.Target;
 @Retention(value = RetentionPolicy.RUNTIME)
 public @interface NativeQuery {
 
+	/**
+	 * sql
+	 * @return sql
+	 */
 	String sql();
+	
+	/**
+	 * returnClas 
+	 * @return returnClas
+	 */
 	Class<?> returnClas(); 
 }

@@ -35,7 +35,16 @@ import java.lang.annotation.Target;
 public @interface Api
 {
 
+	/**
+	 * api path
+	 * @return path
+	 */
 	String path(); 
+	
+	/**
+	 * api description
+	 * @return description
+	 */
 	String description() default "";
 
 }

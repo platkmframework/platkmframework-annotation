@@ -29,12 +29,17 @@ import java.lang.annotation.Target;
 
 
 /**
+ * SystemColumnValue
  *   Author: 
  *     Eduardo Iglesias
  *   Contributors: 
  *   	Eduardo Iglesias - initial API and implementation
- **/
+ */
 public @interface SystemColumnValue{ 
 	
+	/**
+	 * name
+	 * @return name
+	 */
 	String name(); 	
 }

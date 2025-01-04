@@ -35,10 +35,22 @@ import java.lang.annotation.Target;
 public @interface RequestParam 
 {
 
+	/**
+	 * param name
+	 * @return name
+	 */
 	String name(); 
 	
+	/**
+	 * required param
+	 * @return required
+	 */
 	boolean required() default false;
 	
+	/**
+	 * param description
+	 * @return description
+	 */
 	String description() default "";  
 	
 }

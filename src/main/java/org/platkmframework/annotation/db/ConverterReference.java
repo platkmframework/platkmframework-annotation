@@ -35,6 +35,10 @@ import java.lang.annotation.Target;
 
 public @interface  ConverterReference {
 
+	/**
+	 * reference
+	 * @return reference
+	 */
 	String reference();
 }
 

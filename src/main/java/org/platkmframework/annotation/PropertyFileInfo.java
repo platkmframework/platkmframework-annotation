@@ -35,6 +35,10 @@ import java.lang.annotation.Target;
 
 public @interface  PropertyFileInfo {
 
+	/**
+	 * file name
+	 * @return file name
+	 */
 	String name();
 }
 

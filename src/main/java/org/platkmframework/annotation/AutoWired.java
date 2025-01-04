@@ -34,5 +34,9 @@ import java.lang.annotation.Target;
 @Target(ElementType.FIELD)
 public @interface AutoWired { 
 	
+	/**
+	 * key
+	 * @return key value
+	 */
 	String key() default "";
 }

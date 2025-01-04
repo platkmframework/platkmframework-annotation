@@ -34,10 +34,39 @@ import java.lang.annotation.Target;
 @Retention(value = RetentionPolicy.RUNTIME)
 public @interface TimerFixeRateScheduler {
 
+	/**
+	 * name
+	 * @return name
+	 */
 	String name() default "";
+	
+	/**
+	 * runOnStart
+	 * @return runOnStart
+	 */
 	String runOnStart() default "true";
+	
+	/**
+	 * firstTime
+	 * @return firstTime
+	 */
 	String firstTime()  default ""; 
+	
+	/**
+	 * period
+	 * @return period
+	 */
 	String period(); 
+	
+	/**
+	 * delay
+	 * @return delay
+	 */
 	String delay();
+	
+	/**
+	 * dateformat
+	 * @return dateformat
+	 */
 	String dateformat() default "";
 }

@@ -34,6 +34,15 @@ import java.lang.annotation.Target;
 @Target(ElementType.TYPE) //on class level
 public @interface HttpRest
 {
-	String configuration() default ""; 
+	/**
+	 * confguration
+	 * @return configuration name
+	 */
+	String configuration() default "";
+	
+	/**
+	 * description name
+	 * @return description
+	 */
 	String description() default "";
 }

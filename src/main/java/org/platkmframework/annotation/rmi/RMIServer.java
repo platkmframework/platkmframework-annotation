@@ -34,7 +34,21 @@ import java.lang.annotation.Target;
 @Target(ElementType.TYPE) //on class level
 public @interface RMIServer
 {
+	/**
+	 * name
+	 * @return name
+	 */
 	String name(); 
+	
+	/**
+	 * port
+	 * @return port
+	 */
 	String port();
+	
+	/**
+	 * port
+	 * @return port
+	 */
 	String runOnStart() default "true";
 }

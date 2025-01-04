@@ -34,6 +34,10 @@ import java.lang.annotation.Target;
 @Target(ElementType.TYPE) //on class level
 public @interface ApplicationLimit { 
 	
+	/**
+	 * limit class type
+	 * @return class type
+	 */
 	Class<?> limitClass();
 
 }

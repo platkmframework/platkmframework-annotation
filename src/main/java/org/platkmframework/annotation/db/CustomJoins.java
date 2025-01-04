@@ -35,6 +35,10 @@ import java.lang.annotation.Target;
 @Target(ElementType.TYPE) //on class level
 public @interface CustomJoins {
  
+	/**
+	 * joins 
+	 * @return joins
+	 */
 	CustomJoin[] join(); 
 
 }

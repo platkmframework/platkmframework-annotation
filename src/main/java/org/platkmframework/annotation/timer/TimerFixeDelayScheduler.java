@@ -29,15 +29,44 @@ import java.lang.annotation.Target;
  *     Eduardo Iglesias
  *   Contributors: 
  *   	Eduardo Iglesias - initial API and implementation
- **/
+ */
 @Target(value = ElementType.METHOD)
 @Retention(value = RetentionPolicy.RUNTIME)
 public @interface TimerFixeDelayScheduler {
 
+	/**
+	 * name
+	 * @return name
+	 */
 	String name() default "";
+	
+	/**
+	 * runOnStart
+	 * @return runOnStart
+	 */
 	String runOnStart() default "true";
+	
+	/**
+	 * runOnStart
+	 * @return runOnStart
+	 */
 	String firstTime()  default ""; 
+	
+	/**
+	 * runOnStart
+	 * @return runOnStart
+	 */
 	String period(); 
+	
+	/**
+	 * delay
+	 * @return delay
+	 */
 	String delay() default "0";
+	
+	/**
+	 * dateformat
+	 * @return dateformat
+	 */
 	String dateformat() default "";
 }

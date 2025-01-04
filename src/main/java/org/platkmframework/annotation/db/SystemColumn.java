@@ -29,14 +29,24 @@ import java.lang.annotation.Target;
 
 
 /**
+ * SystemColumn
  *   Author: 
  *     Eduardo Iglesias
  *   Contributors: 
  *   	Eduardo Iglesias - initial API and implementation
- **/
+ */
 public @interface SystemColumn{ 
 	
-	String key(); 	
+	/**
+	 * key
+	 * @return key
+	 */
+	String key(); 
+	
+	/**
+	 * key
+	 * @return key
+	 */
 	SystemColumnAction action();
 
 }

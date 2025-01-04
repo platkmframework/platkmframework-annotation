@@ -35,6 +35,10 @@ import java.lang.annotation.Target;
 
 public @interface  PropertyFileContent {
 
+	/**
+	 * path
+	 * @return path
+	 */
 	String path();
 }
 

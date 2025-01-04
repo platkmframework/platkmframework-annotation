@@ -35,9 +35,27 @@ import java.lang.annotation.Target;
 @Target(ElementType.TYPE) //on class level
 public @interface CustomJoin {
  
+	/**
+	 * join table name
+	 * @return table
+	 */
 	String table(); 
+	/**
+	 * alias 
+	 * @return alias
+	 */
 	String alias();
+	
+	/**
+	 *  columns
+	 * @return columns
+	 */
 	String columns();
+	
+	/**
+	 * on inner join 
+	 * @return on
+	 */
 	String on();
 
 }

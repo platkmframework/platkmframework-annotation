@@ -34,6 +34,10 @@ import java.lang.annotation.Target;
 @Retention(value = RetentionPolicy.RUNTIME)
 public @interface JBean {
 	
+	/**
+	 * bean name
+	 * @return name
+	 */
 	String name() default "";
  
 }

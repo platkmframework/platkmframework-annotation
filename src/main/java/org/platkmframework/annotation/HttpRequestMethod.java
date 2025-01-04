@@ -26,11 +26,26 @@ package org.platkmframework.annotation;
  *   	Eduardo Iglesias - initial API and implementation
  **/
 public enum HttpRequestMethod {
-	
+
+	/**
+	 * GET
+	 */
 	GET,
+	/**
+	 * POST
+	 */
 	POST,
+	/**
+	 * PUT
+	 */
 	PUT,
+	/**
+	 * DELETE
+	 */
 	DELETE,
+	/**
+	 * OPTIONS
+	 */
 	OPTIONS
 	
 
